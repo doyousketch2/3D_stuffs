@@ -32,7 +32,7 @@ $(  function() {  //  onload
 
         //========================================================================================//
 
-        $( ".slider" ) .each(  function( index ) {
+        $( "div.slider" ) .each(  function( index ) {
             $( this ) .slider(  {
                 range: "max",
 		            min: minimum,
