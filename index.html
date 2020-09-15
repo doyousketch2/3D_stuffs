@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3D stuffs</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <link rel="stylesheet" href="scripts/style.css">
+
+        <script src="scripts/topnav.js"></script>
+        <script src="scripts/sliders.js"></script>
+        <script src="scripts/canvas_resize.js"></script>
+    </head>
+<!--  page begin  -->
+    <body>
+        <nav id="topnav">
+            <button id="Head">Head</a>
+            <button id="Torso">Torso</a>
+            <button id="Arms">Arms</a>
+            <button id="Hands">Hands</a>
+            <button id="Legs">Legs</a>
+            <button id="Feet">Feet</a>
+
+            <button id="Camera" style="float:right">Camera</a>
+            <button id="Accessories" style="float:right">Accessories</a>
+        </nav>
+
+        <!--  canvas  -->
+        <canvas id="cloth"></canvas>
+
+        <!--  dynamic menu  -->
+        <nav id="sliders"></nav>
+
+        <!--  footer  -->
+        <div id="footer">
+            <pre id="Info1">Info1</pre>
+            <pre id="Info2">Info2</pre>
+        </div>
+
+    </body>
+<!--  page end  -->
+</html>
