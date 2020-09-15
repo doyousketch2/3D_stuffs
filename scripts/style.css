@@ -56,8 +56,9 @@ body {
 }
 
 
-.slider {
-    width: auto;
+.slide {
+    width: 95%;
+    margin: 6px;
 }
 
 
@@ -75,9 +76,9 @@ body {
 
 
 .label {
-    color: #DEF;
+    color: #345;
     font-size: 16px;
-    text-shadow: -2px 2px #123;
+    text-shadow: -1px 1px #123;
     display: block;
     text-align: center;
 }
