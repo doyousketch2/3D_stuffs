@@ -1,0 +1,115 @@
+/*===============================================================================================*/
+/*  defaults  -----------------------------------------------------------------------------------*/
+
+body {
+    font-family: Arial;
+    background: #FFF;
+}
+
+/*===============================================================================================*/
+/*  top menu  -----------------------------------------------------------------------------------*/
+
+#topnav {
+    height: 40px;
+    overflow: hidden;
+    background-color: #123;
+}
+
+
+#topnav button {
+    float: left;
+    display: block;
+    border: none;
+    padding: 9px;
+    color: #DEF;
+    background-color: #123;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*  stack nav-buttons on tiny screens  */
+@media screen and ( max-width: 450px ) {
+    .topnav a {
+        float: none;
+        width: 100%;
+        padding: 3px;
+    }
+}
+
+/*===============================================================================================*/
+/*  main  ---------------------------------------------------------------------------------------*/
+
+#cloth {
+    float: left;
+    border: 6px double #789;
+    width: 50px;
+    height: 50px;
+}
+
+
+#sliders {
+    float: right;
+    width: 33%;
+    padding: 3px;
+    background-color: #789;
+}
+
+
+.slider {
+    width: auto;
+}
+
+
+.shoulder .ui-slider-range { background-color: #999; }
+.elbow .ui-slider-range { background-color: #666; }
+.wrist .ui-slider-range { background-color: #333; }
+
+.x .ui-slider-handle { border-width: 2px;  border-color: #E00; }
+.y .ui-slider-handle { border-width: 2px;  border-color: #0E0; }
+.z .ui-slider-handle { border-width: 2px;  border-color: #00E; }
+
+.x { background-color: #EAA; }
+.y { background-color: #AEA; }
+.z { background-color: #AAE; }
+
+
+.label {
+    color: #DEF;
+    font-size: 16px;
+    text-shadow: -2px 2px #123;
+    display: block;
+    text-align: center;
+}
+
+
+.info {
+    width: 28px;
+}
+
+
+/*  sliders below on small screens  */
+@media screen and ( max-width: 600px ) {
+    .sliders {
+        width: 100%;
+    }
+}
+
+/*===============================================================================================*/
+/*  footer  -------------------------------------------------------------------------------------*/
+
+#footer {
+    height: 60px;
+    text-align: center;
+    background-color: #123;
+    position: absolute;
+    display: block;
+    bottom: 0;
+}
+
+#footer pre {
+    color: #DEF;
+}
+
+/*===============================================================================================*/
+/*  eof  ----------------------------------------------------------------------------------------*/
