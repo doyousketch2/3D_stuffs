@@ -2,9 +2,20 @@
 /*  defaults  -----------------------------------------------------------------------------------*/
 
 body {
-    font-family: Arial;
-    background: #FFF;
-}
+	  font-family: Arial, Helvetica, sans-serif;
+    background: #FFF;  }
+
+table {
+    font-size: 1em;  }
+
+.ui-draggable, .ui-droppable {
+    background-position: top;  }
+
+.left {  float: left  }
+.right {  float: right  }
+
+.textfield {
+  text-align: left;  }
 
 /*===============================================================================================*/
 /*  top menu  -----------------------------------------------------------------------------------*/
@@ -12,8 +23,7 @@ body {
 #topnav {
     height: 40px;
     overflow: hidden;
-    background-color: #123;
-}
+    background-color: #123;  }
 
 
 #topnav button {
@@ -24,8 +34,7 @@ body {
     color: #DEF;
     background-color: #123;
     text-align: center;
-    text-decoration: none;
-}
+    text-decoration: none;  }
 
 
 /*  stack nav-buttons on tiny screens  */
@@ -33,8 +42,7 @@ body {
     .topnav a {
         float: none;
         width: 100%;
-        padding: 3px;
-    }
+        padding: 3px;  }
 }
 
 /*===============================================================================================*/
@@ -44,35 +52,33 @@ body {
     float: left;
     border: 6px double #789;
     width: 50px;
-    height: 50px;
-}
+    height: 50px;  }
 
 
 #sliders {
     float: right;
     width: 33%;
     padding: 3px;
-    background-color: #789;
-}
+    background-color: #789;  }
 
 
 .slide {
     width: 95%;
     margin: 6px;
-}
+    background-color: #123;  }
 
 
-.shoulder .ui-slider-range { background-color: #999; }
-.elbow .ui-slider-range { background-color: #666; }
-.wrist .ui-slider-range { background-color: #333; }
+.shoulder .ui-slider-range {  background-color: #999;  }
+.elbow .ui-slider-range {  background-color: #666;  }
+.wrist .ui-slider-range {  background-color: #333;  }
 
-.x .ui-slider-handle { border-width: 2px;  border-color: #E00; }
-.y .ui-slider-handle { border-width: 2px;  border-color: #0E0; }
-.z .ui-slider-handle { border-width: 2px;  border-color: #00E; }
+.x .ui-slider-handle {  border-width: 2px;  border-color: #E00;  }
+.y .ui-slider-handle {  border-width: 2px;  border-color: #0E0;  }
+.z .ui-slider-handle {  border-width: 2px;  border-color: #00E;  }
 
-.x { background-color: #EAA; }
-.y { background-color: #AEA; }
-.z { background-color: #AAE; }
+.x {  background-color: #EAA;  }
+.y {  background-color: #AEA;  }
+.z {  background-color: #AAE;  }
 
 
 .label {
@@ -80,20 +86,17 @@ body {
     font-size: 16px;
     text-shadow: -1px 1px #123;
     display: block;
-    text-align: center;
-}
+    text-align: center;  }
 
 
 .info {
-    width: 28px;
-}
+    width: 28px;  }
 
 
 /*  sliders below on small screens  */
 @media screen and ( max-width: 600px ) {
     .sliders {
-        width: 100%;
-    }
+        width: 100%;  }
 }
 
 /*===============================================================================================*/
@@ -105,12 +108,37 @@ body {
     background-color: #123;
     position: absolute;
     display: block;
-    bottom: 0;
-}
+    bottom: 0;  }
+
 
 #footer pre {
+    color: #DEF;  }
+
+
+#input {
+    padding: 3px;
+    margin: 3px;
     color: #DEF;
-}
+    font-size: 23px;
+    height: 28px;
+    width: 48%;
+    bottom: 12px;
+    left: 8px;
+    position: absolute;
+    background-color: #789  }
+
+
+#output {
+    padding: 3px;
+    margin: 3px;
+    color: #DEF;
+    font-size: 23px;
+    height: 28px;
+    width: 48%;
+    bottom: 12px;
+    right: 8px;
+    position: absolute;
+    background-color: #789  }
 
 /*===============================================================================================*/
 /*  eof  ----------------------------------------------------------------------------------------*/
