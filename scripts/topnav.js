@@ -1,63 +1,69 @@
+function generate_sliders() {  //  callback during .load()
+    var minimum  = 0,
+        maximum  = 100,
+        half = ( maximum -minimum ) /2;
+
+    $( ".info" ) .each(  function( index ) {  //  populate initial values
+        $( this ) .val( (index +1) *10 )
+    }  );  //  input.info
+
+
+    $( ".slide" ) .each(  function( index ) {
+        $( this ) .slider(  {
+            range: "max",  //  shade right side
+
+            min: minimum,
+         	  value: $( this ) .prev( ".info" ) .val(),
+          	max: maximum,
+
+            slide: function( event,  ui ) {
+                $( this ) .prev( ".info" ) .val( ui .value );  }  //  update during sliding
+        }  );
+    }  );  //  div.slide
+
+};  //  generate_sliders()
+
+//================================================================================================//
+
 $(  function() {  //  onload
 
     $( "nav#topnav button" ) .hover(  function() {
             $( this ) .css( "border", "3px solid #789" ) .css( "padding", "6px" );
         }, function() {
             $( this ) .css( "border", "none" ) .css( "padding", "9px" );
-    }  );
+    }  );  //  .hover()
 
     //============================================================================================//
 
-    $( "nav#topnav button" ) .click(  function( event ) {
+    $( "nav#topnav" ) .on( "click",  "button",  function( event ) {
         $( "nav#topnav button" ) .css( "background-color", "#123" ) .css( "color", "#DEF" );
         $( this ) .css( "background-color", "#789" ) .css( "color", "#123" );
 
-        var target = $( event .target ),
-            delay_amount  = 300;
+        var target = $( event .target );
 
         if      ( target .is( "button#Head" ) )  {  $( "nav#sliders" ) .html( "head.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/head.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/head.html",  generate_sliders );  }
 
         else if ( target .is( "button#Torso" ) )  {  $( "nav#sliders" ) .html( "torso.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/torso.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/torso.html",  generate_sliders );  }
 
         else if ( target .is( "button#Arms" ) )  {  $( "nav#sliders" ) .html( "arms.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/arms.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/arms.html",  generate_sliders );  }
 
         else if ( target .is( "button#Hands" ) )  {  $( "nav#sliders" ) .html( "hands.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/hands.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/hands.html",  generate_sliders );  }
 
         else if ( target .is( "button#Legs" ) )  {  $( "nav#sliders" ) .html( "legs.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/legs.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/legs.html",  generate_sliders );  }
 
         else if ( target .is( "button#Feet" ) )  {  $( "nav#sliders" ) .html( "feet.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/feet.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/feet.html",  generate_sliders );  }
 
         else if ( target .is( "button#Camera" ) )  {  $( "nav#sliders" ) .html( "camera.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/camera.html" );  }
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/camera.html",  generate_sliders );  }
 
         else if ( target .is( "button#Accessories" ) )  {  $( "nav#sliders" ) .html( "accessories.html" )
-            .delay( delay_amount ) .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/accessories.html" );  };
-
-        var minimum  = 0,
-            maximum  = 100,
-            half = ( maximum -minimum ) /2;
-
-        //========================================================================================//
-
-        $( "div.slide" ) .delay( 1000 ) .each(  function( index ) {
-            $( this ) .slider(  {
-                range: "max",
-		            min: minimum,
-              	max: maximum,
-             	  value: index *5,
-                slide: function( event,  ui ) {
-                    $( this ) .prev( "input.info" ) .val( ui .value );  }  //  update during sliding
-            }  );
-
-            $( this ) .prev( "input.info" ) .val(
-                $( this ) .slider( "value" )  );  //  set initial value
-        }  );
+            .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/accessories.html",  generate_sliders );  };
 
         //========================================================================================//
 
@@ -66,13 +72,16 @@ $(  function() {  //  onload
             else if ( this .value > maximum ) { this .value = maximum };
 
             $( this ) .next( "div.slide" ) .slider( "value",  this .value );  //  type-in nudges slider
-        } );
-    }  );
+        } );  //  .keyup()
+
+    }  );  //  .click()
 
     //============================================================================================//
 
     $( "#footer" ) .width(  $( "nav#topnav" ) .width()  );
 
-}  );
+    $( "#input" ) .val( "Input" );
+
+}  );  //  document .ready()
 
 //  eof  =========================================================================================//
