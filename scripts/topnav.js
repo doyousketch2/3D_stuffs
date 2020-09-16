@@ -23,6 +23,10 @@ function generate_sliders() {  //  callback during .load()
         }  );
     }  );  //  div.slide
 
+    $( ".info.x" ) .each(  function( index ) {  //  nudge red ones upward a bit
+        $( this ) .css( "top",  "-20px" )
+    }  );  //  input.info
+
 };  //  generate_sliders()
 
 //================================================================================================//
