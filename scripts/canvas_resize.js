@@ -23,5 +23,6 @@ function canvas_size() {
 
 $( canvas_size );  //  onload
 $( window ) .resize( canvas_size );
+$( document ) .resize( canvas_size );
 
 //  eof  =========================================================================================//
