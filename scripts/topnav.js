@@ -1,29 +1,33 @@
+//================================================================================================//
+
 function generate_sliders() {  //  callback during .load()
     var minimum  = 0,
         maximum  = 100,
         half = ( maximum -minimum ) /2;
 
     $( ".info" ) .each(  function( index ) {  //  populate initial values
-        $( this ) .val( (index +1) *10 )
+        $( this ) .val( (index +1) *6 )
     }  );  //  input.info
 
 
     $( ".slide" ) .each(  function( index ) {
         $( this ) .slider(  {
-            range: "max",  //  shade right side
+            range: "min",  //  shade side
 
             min: minimum,
-         	  value: $( this ) .prev( ".info" ) .val(),
+         	  value: $( this ) .children( ".info" ) .val(),
           	max: maximum,
 
             slide: function( event,  ui ) {
-                $( this ) .prev( ".info" ) .val( ui .value );  }  //  update during sliding
+                $( this ) .children( ".info" ) .val( ui .value );  }  //  update during sliding
         }  );
     }  );  //  div.slide
 
 };  //  generate_sliders()
 
 //================================================================================================//
+
+$( generate_sliders );  //  onload
 
 $(  function() {  //  onload
 
@@ -65,16 +69,16 @@ $(  function() {  //  onload
         else if ( target .is( "button#Accessories" ) )  {  $( "nav#sliders" ) .html( "accessories.html" )
             .load( "https://raw.githubusercontent.com/doyousketch2/3D_stuffs/master/scripts/accessories.html",  generate_sliders );  };
 
-        //========================================================================================//
-
-        $( "input.info" ) .keyup( function () {
-            if ( this .value < minimum ) { this .value = minimum }
-            else if ( this .value > maximum ) { this .value = maximum };
-
-            $( this ) .next( "div.slide" ) .slider( "value",  this .value );  //  type-in nudges slider
-        } );  //  .keyup()
-
     }  );  //  .click()
+
+    //============================================================================================//
+
+    $( "input.info" ) .on( "keyup",  function () {
+        if ( this .value < minimum ) { this .value = minimum }
+        else if ( this .value > maximum ) { this .value = maximum };
+
+        $( this ) .parent( "div.slide" ) .slider( "value",  this .value );  //  type-in nudges slider
+    } );  //  .keyup()
 
     //============================================================================================//
 

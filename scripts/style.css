@@ -57,40 +57,52 @@ table {
 
 #sliders {
     float: right;
-    width: 33%;
-    padding: 3px;
+    width: 35%;
+    padding: 25px 3px;
     background-color: #789;  }
 
 
-.slide {
-    width: 95%;
-    margin: 6px;
-    background-color: #123;  }
-
-
-.shoulder .ui-slider-range {  background-color: #999;  }
-.elbow .ui-slider-range {  background-color: #666;  }
-.wrist .ui-slider-range {  background-color: #333;  }
-
-.x .ui-slider-handle {  border-width: 2px;  border-color: #E00;  }
-.y .ui-slider-handle {  border-width: 2px;  border-color: #0E0;  }
-.z .ui-slider-handle {  border-width: 2px;  border-color: #00E;  }
-
-.x {  background-color: #EAA;  }
-.y {  background-color: #AEA;  }
-.z {  background-color: #AAE;  }
-
-
-.label {
+.slide .label {
     color: #345;
     font-size: 16px;
     text-shadow: -1px 1px #123;
-    display: block;
-    text-align: center;  }
+    top: -25px;
+    position: relative;
+    text-align: left;  }
 
 
-.info {
+.slide .info {
     width: 28px;  }
+
+
+.slide {
+    float: right;
+    right: 12px;
+    width: 83%;
+    height: 8px;
+    margin: 15px 0px;
+    background-color: #123;  }
+
+
+.slide .info {
+    left: -56px;
+    width: 36px;
+    position: relative;  }
+
+
+.x .ui-slider-range {  background-color: #FCC;  }
+.y .ui-slider-range {  background-color: #CFC;  }
+.z .ui-slider-range {  background-color: #CCF;  }
+
+
+.x .ui-slider-handle {  height: 15px;  top: -1px;  border-width: 2px;  background-color: #FCC;  border-color: #900;  }
+.y .ui-slider-handle {  height: 15px;  top: -1px;  border-width: 2px;  background-color: #CFC;  border-color: #090;  }
+.z .ui-slider-handle {  height: 15px;  top: -1px;  border-width: 2px;  background-color: #CCF;  border-color: #009;  }
+
+
+.x {  background-color: #CAA;  }
+.y {  background-color: #ACA;  }
+.z {  background-color: #AAC;  }
 
 
 /*  sliders below on small screens  */
