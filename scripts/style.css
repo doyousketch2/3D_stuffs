@@ -78,16 +78,16 @@ table {
 
 .slide {
     float: right;
-    right: 12px;
-    width: 83%;
+    right: 18px;
+    width: 76%;
     height: 8px;
     margin-bottom: 15px;
     background-color: #123;  }
 
 
 .slide .info {
-    left: -56px;
-    width: 36px;
+    left: -75px;
+    width: 55px;
     display: block;
     position: relative;  }
 
