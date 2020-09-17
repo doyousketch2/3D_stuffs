@@ -11,11 +11,11 @@ long URL:  http://htmlpreview.github.io/?https://github.com/doyousketch2/3D_stuf
 
 To Do:  
 
-- [x] UI top navigation buttons.
+- [x] UI - top navigation buttons.
 
-- [x] UI load side navagation panel.
-- [x] UI generate sliders.
+- [x] UI - load side navagation panel.
+- [x] UI - generate sliders.
 
 - [ ] create model data.
-- [ ] rotate and generate model.
+- [ ] rotate & generate model.
 - [ ] draw 3D model.
